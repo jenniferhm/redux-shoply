@@ -5,7 +5,7 @@ import { add, remove } from "../actions";
 function mapStateToProps(state) {
   return {
     products: state.products,
-    cartList: state.cartList
+    cartItems: state.cartItems
   };
 }
 

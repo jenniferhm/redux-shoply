@@ -7,8 +7,9 @@ export function add(item) {
   };
 }
 
-export function remove() {
+export function remove(id) {
   return {
-    type: REMOVE_FROM_CART
+    type: REMOVE_FROM_CART,
+    payload: id
   };
 }
