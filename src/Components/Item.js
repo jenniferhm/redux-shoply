@@ -1,12 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Item extends React.Component {
   render() {
-    const {name, price} = this.props.item;
+    let { name, price, count } = this.props.item;
+    if (count === 1) {
+      debugger;
+    }
+    console.log("Count:", count);
     return (
       <div className="item">
-        <h4>{name}</h4>
-        <p>${price}</p>
+        <Link to={`/products/${this.props.id}`}>
+          <div>
+            <h4>{name}</h4>
+            <p>${price}</p>
+          </div>
+        </Link>
+        <p>You have {count || 0} {name}'s in your cart.</p>
         <button onClick={this.props.add}>Add to Cart</button>
         <button onClick={this.props.remove}>Remove from Cart</button>
       </div>

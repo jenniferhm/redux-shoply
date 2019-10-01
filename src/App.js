@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import StoreListContainer from './Containers/StoreListContainer';
+import Routes from './Routes';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <StoreListContainer />
-        <button>Cart</button>
+        <Routes />
       </div>
     );
   }
