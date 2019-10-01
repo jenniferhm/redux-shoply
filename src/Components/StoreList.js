@@ -15,7 +15,6 @@ class StoreList extends React.Component {
 
   render() {
     const { products, add, remove, cartItems } = this.props;
-    console.log(cartItems);
     let items = Object.entries(products).map(([k, v]) => {
       if (cartItems[k]) {
         return (

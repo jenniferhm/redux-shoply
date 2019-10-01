@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 class Item extends React.Component {
   render() {
     let { name, price, count } = this.props.item;
-    if (count === 1) {
-      debugger;
-    }
-    console.log("Count:", count);
     return (
       <div className="item">
         <Link to={`/products/${this.props.id}`}>
